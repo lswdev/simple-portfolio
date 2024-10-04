@@ -2,7 +2,7 @@
   <div id="app">
     <div class="cursor-custom" v-if="$route.name==='enter'"></div>
     <div v-if="$route.name==='enter'" id="enter">
-      <router-view ></router-view>
+      <router-view></router-view>
     </div>
     <div v-else-if="$route.name!=='enter'" id="main-grid">
       <section>
