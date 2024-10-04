@@ -1,30 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Enter msg="시우의 개발페이지"/>
+    <div class="cursor-custom" v-if="$route.name==='enter'"></div>
+    <div v-if="$route.name==='enter'" id="enter">
+      <router-view ></router-view>
+    </div>
+    <div v-else-if="$route.name!=='enter'" id="main-grid">
+      <section>
+        <h1>Lee Siwoo</h1>
+        <p class="simple-text">
+          A multidisciplinary designer with over ten years of proficiency. Specialized in crafting a new type of interaction, systemic design, UX framework. Enjoying prototyping with SwiftUI.
+        </p>
+        <p class="simple-text">
+          Currently UX Lead / Manager for Google Lens and Based in San Francisco, CA.
+        </p>
+        <router-view></router-view>
+      </section>
+    </div>
   </div>
 </template>
 
 <script>
-import Enter from '@/views/Enter.vue'
-// import Intro from '@/views/Intro.vue'
-// import Resume from '@/views/Resume.vue'
 
 export default {
-  components: { Enter }, //, Intro, Resume
+  components: {  }, //, Intro, Resume
   data: () => ({
-
   }),
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

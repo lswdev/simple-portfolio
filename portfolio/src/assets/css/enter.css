@@ -1,0 +1,116 @@
+/* animation */
+#enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  /*background-image: linear-gradient(to right, #434343 0%, black 100%);*/
+  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
+  /*background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);*/
+  /*background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply;*/
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #fff;
+  transition: 0.3s;
+}
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.ring:hover i {
+  border: 2px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.custom-area .inputBx {
+  position: relative;
+  text-align: center;
+}
+.custom-area .inputBx button {
+  opacity: 0;
+  position: relative;
+  width: 250px;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  box-shadow: none;
+  color: #fff;
+  outline: none;
+  margin-top: 1rem;
+  font-size: 1.12rem;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.7s ease all;
+  transition-delay: 0.3s;
+}
+.custom-area h2.my-name {
+  text-align: center;
+  font-size: 2rem;
+  transform: translateY(100%);
+  transition: 0.5s ease-in all;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.91);
+}
+.enter-view:hover h2.my-name {
+  transform: translateY(0);
+}
+.enter-view:hover .inputBx button {
+  opacity: 1;
+}
+.custom-area .inputBx button:hover {
+  transition: 0.2s ease all;
+  border: 1px solid #01fdcf;
+  filter: drop-shadow(0 0 2px #01fdcf);
+}
+.custom-area .inputBx button::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media all and (max-width: 640px) {
+  .ring {
+    width: 280px;
+    height: 280px;
+  }
+}

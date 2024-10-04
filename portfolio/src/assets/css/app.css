@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* font-weight : 100 - 900; */
+
+/* util */
+@import "input.css";
+@import "button.css";
+
+/* components */
+@import "enter.css";
+@import "intro.css";
+
+/* ALL */
+*::-webkit-scrollbar { display: none }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
+  font-family: "Noto Sans KR", "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+/* 마우스 포인터 */
+.cursor-custom {
+  position: absolute;
+  background: #000;
+  opacity: .07;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  animation: pulse .5s cubic-bezier(.51,0,0.4,.5) alternate infinite;
+  transform: translate(-50%,-50%) scale(1);
+}
+.cursor-custom.active { animation:bounce .5s ease; }
+
+@keyframes pulse {
+  from { width:50px;height:50px; }
+  to { width:60px; height:60px; }
+}
+@keyframes bounce {
+  100%{ transform: translate(-50%,-50%) scale(2); opacity:0; }
+  0%{ transform: translate(-50%,-50%) scale(1); opacity:1; }
+}
+
+
