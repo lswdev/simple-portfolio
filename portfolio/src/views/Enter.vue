@@ -26,9 +26,6 @@ export default {
     }),
     deviceInfo: '',
   }),
-  created() {
-    window.$('#enter').fadeIn(200);
-  },
   methods: {
     // Mobile device 확인
     isMobile() {
@@ -50,7 +47,8 @@ export default {
     },
     introDetail() {
       window.$('#enter').fadeOut(200);
-      setTimeout(this.changePage,300);
+      // setTimeout(this.changePage,300);
+      this.changePage();
     },
     changePage() {
       this.$router.push('/intro');
@@ -65,12 +63,11 @@ export default {
     inputAnimation();
     this.checkBrowser();
     this.isMobile();
+    window.$('#enter').fadeIn(200);
   },
 }
 </script>
 
 <style scoped>
-  * {
-    user-select: none;
-  }
+  * { user-select: none; }
 </style>

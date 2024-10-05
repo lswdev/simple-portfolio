@@ -5,12 +5,12 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  /*background-image: linear-gradient(to right, #434343 0%, black 100%);*/
-  /*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
-  /*background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);*/
+  /*background-image: linear-gradient(to right, #08112a 0%, black 100%);*/
+  /*background-image: linear-gradient(to right, #08112a 0%, black 100%);*/
+  background-image: linear-gradient(to right, #051917 0%, black 100%);
   /*background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   background-blend-mode: multiply;*/
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  /*background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);*/
 }
 
 .ring {
@@ -88,6 +88,7 @@
 .custom-area h2.my-name {
   text-align: center;
   font-size: 2rem;
+  font-weight: 300;
   transform: translateY(100%);
   transition: 0.5s ease-in all;
   margin-bottom: 2.5rem;
@@ -110,7 +111,17 @@
 
 @media all and (max-width: 640px) {
   .ring {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
+  }
+  .custom-area h2.my-name {
+    margin-top: 0;
+    margin-bottom: 1.125rem;
+    font-size: 1.625rem;
+  }
+  .custom-area .inputBx button {
+    width: 125px;
+    font-size: 0.875rem;
+    padding: 8px 14px;
   }
 }
