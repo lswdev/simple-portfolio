@@ -49,7 +49,6 @@ table {
 /* 마우스 포인터 */
 .cursor-custom {
   position: absolute;
-  z-index: 10000;
   background: rgba(255, 255, 255, 0.35);
   opacity: .07;
   width: 50px;
