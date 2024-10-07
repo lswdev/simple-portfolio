@@ -31,23 +31,33 @@ function newPointerAnimation() {
 
   animate();
 
-  document.addEventListener('mousemove',function(e){
+  // 이벤트 리스너 함수
+  const mouseMoveHandler = (e) => {
     mouseX = e.pageX;
     mouseY = e.pageY;
-  });
+  };
 
-  document.addEventListener('click',function(e){
-    e.preventDefault;
+  const clickHandler = (e) => {
+    e.preventDefault();
     bob.classList.remove('active');
-    //some rando comment
 
+    // some rando comment
     void bob.offsetWidth;
 
     bob.classList.add('active');
+  };
 
-  },false);
+  // 이벤트 리스너 등록
+  document.addEventListener('mousemove', mouseMoveHandler);
+  document.addEventListener('click', clickHandler, false);
 
-
+  // 정리 함수 반환
+  return {
+    destroy() {
+      document.removeEventListener('mousemove', mouseMoveHandler);
+      document.removeEventListener('click', clickHandler);
+    }
+  };
 }
 
 

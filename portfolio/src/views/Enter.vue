@@ -60,11 +60,14 @@ export default {
     },
   },
   mounted() {
-    newPointerAnimation();
+    this.pointerAnimation = newPointerAnimation();
     inputAnimation();
     this.checkBrowser();
     this.isMobile();
   },
+  beforeDestroy() {
+    this.pointerAnimation.destroy();
+  }
 }
 </script>
 
