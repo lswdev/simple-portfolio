@@ -28,12 +28,17 @@ export default {
   components: { Enter, Intro, Works, Resume },
   data: () => ({
     page: 0,
+    startY: 0,
   }),
   mounted() {
     window.addEventListener('wheel', this.handleWheel, { passive: false });
+    window.addEventListener('touchstart', this.handleTouchStart, { passive: false });
+    window.addEventListener('touchmove', this.handleTouchMove, { passive: false });
   },
   beforeDestroy() {
     window.removeEventListener('wheel', this.handleWheel);
+    window.removeEventListener('touchstart', this.handleTouchStart);
+    window.removeEventListener('touchmove', this.handleTouchMove);
   },
   methods: {
     handleWheel(e) {
@@ -52,6 +57,24 @@ export default {
         this.page = 0;
       } else if (this.page > lastPage) {
         this.page = lastPage;
+      }
+
+      this.page = Math.max(0, Math.min(this.page, lastPage - 1));
+      wrap.style.top = this.page * -100 + 'vh';
+    },
+    handleTouchStart(e) {
+      this.startY = e.touches[0].clientY;
+    },
+    handleTouchMove(e) {
+      const wrap = document.getElementsByClassName('common-page')[0];
+      const moveY = e.touches[0].clientY - this.startY;
+
+      if (moveY > 180) {
+        this.page = Math.max(0, this.page - 1);
+        this.startY = e.touches[0].clientY;
+      } else if (moveY < -180) {
+        this.page = Math.min(this.page + 1, wrap.children.length);
+        this.startY = e.touches[0].clientY;
       }
 
       wrap.style.top = this.page * -100 + 'vh';
