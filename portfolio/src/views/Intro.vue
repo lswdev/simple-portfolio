@@ -16,7 +16,40 @@
 
       <div class="item-contain item-grid">
         <div class="grid-contents">
-          글 쓸 곳
+
+          <div class="exp">
+            <div class="exp-date">2019.01 ~ 2019.07</div>
+            <div class="exp-detail">
+              <b>apwisdom</b>
+              <span>
+                Leading a input + result framework team for Google Lens.
+                Especially focusing on Multimodal input that leverages search stack as well as LLM capabilities.
+              </span>
+            </div>
+          </div>
+
+          <div class="exp">
+            <div class="exp-date">2019.01 ~ 2019.07</div>
+            <div class="exp-detail">
+              <b>apwisdom</b>
+              <span>
+                Leading a input + result framework team for Google Lens.
+                Especially focusing on Multimodal input that leverages search stack as well as LLM capabilities.
+              </span>
+            </div>
+          </div>
+
+          <div class="exp">
+            <div class="exp-date">2019.01 ~ 2019.07</div>
+            <div class="exp-detail">
+              <b>apwisdom</b>
+              <span>
+                Leading a input + result framework team for Google Lens.
+                Especially focusing on Multimodal input that leverages search stack as well as LLM capabilities.
+              </span>
+            </div>
+          </div>
+
         </div>
         <div class="grid-picture"></div>
       </div>

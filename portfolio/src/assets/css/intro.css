@@ -3,7 +3,7 @@
   border-radius: 60px 60px 0 0;
 }
 #intro-page .item-contain:first-child {
-  padding: 2rem 0;
+  padding: 2rem 0 5rem;
 }
 
 /* 아이템 요소 컨테이너 */
@@ -12,20 +12,38 @@
   width: 100%;
 }
 #intro-page .item-grid {
-  border: 1px solid red;
   width: 100%;
   display: grid;
-  /*grid-template-columns: repeat(2, 1fr);*/
-  /*grid-template-rows: repeat(1, minmax(100px, auto));*/
-  /*grid-auto-rows: minmax(100px, auto);*/
   grid-template-areas:
     "contents picture"
     "contents picture";
   grid-template-columns: 1fr 300px;
+  gap: 0 1rem;
 }
 .grid-contents {
   grid-area: contents;
-  /*grid-template-columns: repeat(auto-fill, minmax());*/
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.grid-contents > .exp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  color: #888;
+}
+.exp .exp-date {
+  min-width: 160px;
+}
+.exp .exp-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.525rem;
+}
+.exp .exp-detail b {
+  color: #000;
 }
 .grid-picture {
   grid-area: picture;
