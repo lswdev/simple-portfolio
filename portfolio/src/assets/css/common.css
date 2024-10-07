@@ -1,4 +1,9 @@
 /* 공통 사용 페이지 */
 .common-page {
-
+  position: relative; /* 변경 */
+  top: 0; /* 초기 위치 설정 */
+  z-index: 101;
+  width: 100%;
+  height: 100vh; /* 전체 높이 설정 */
+  transition: top 0.9s ease; /* 부드러운 전환 효과 */
 }

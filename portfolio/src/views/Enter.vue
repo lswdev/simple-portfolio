@@ -7,7 +7,7 @@
       <div class="custom-area" style="z-index: 100">
         <h2 class="my-name">Lee Siwoo</h2>
         <div class="inputBx input-intro">
-          <button id="intro-submit-btn" @click="introDetail">확인하기</button>
+          <button id="intro-submit-btn" @click="changePage">확인하기</button>
         </div>
       </div>
     </div>
@@ -27,7 +27,6 @@ export default {
     deviceInfo: '',
   }),
   methods: {
-    // Mobile device 확인
     isMobile() {
       const info = navigator.userAgent;
       let flag = false;
@@ -45,13 +44,12 @@ export default {
     pointerShowAnimation() {
       window.$('.cursor').fadeIn(200);
     },
-    introDetail() {
-      window.$('#enter').fadeOut(200);
-      // setTimeout(this.changePage,300);
-      this.changePage();
-    },
     changePage() {
-      this.$router.push('/intro');
+      // this.$router.push('/intro');
+      const commonPage = document.getElementsByClassName('common-page')[0];
+      commonPage.style.top = -100 + 'vh';
+
+      this.$emit('page-changed');
     },
     checkBrowser() {
       this.browserInfo.platform = navigator.platform;
@@ -63,7 +61,6 @@ export default {
     inputAnimation();
     this.checkBrowser();
     this.isMobile();
-    window.$('#enter').fadeIn(200);
   },
 }
 </script>
