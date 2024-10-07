@@ -3,15 +3,13 @@
     <div class="cursor-custom" v-if="$route.name==='enter'"></div>
     <div>
       <div id="enter">
-        <template v-if="$route.name==='enter'">
-          <Enter @page-changed="handlePageChange"></Enter>
-        </template>
+        <Enter @page-changed="handlePageChange"></Enter>
       </div>
 
       <div class="common-page">
-        <div style="width: 100%; height: 100vh; border: 2px solid red; box-sizing: border-box;"></div>
-        <div style="width: 100%; height: 100vh; border: 2px solid green; box-sizing: border-box;"></div>
-        <div style="width: 100%; height: 100vh; border: 2px solid greenyellow; box-sizing: border-box;"></div>
+        <Intro></Intro>
+        <Works></Works>
+        <Resume></Resume>
       </div>
 
     </div>
@@ -20,9 +18,12 @@
 
 <script>
 import Enter from '@/views/Enter.vue';
+import Intro from '@/views/Intro.vue';
+import Works from '@/views/Works.vue';
+import Resume from '@/views/Resume.vue';
 
 export default {
-  components: { Enter },
+  components: { Enter, Intro, Works, Resume },
   data: () => ({
     page: 0,
   }),

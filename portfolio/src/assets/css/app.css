@@ -14,7 +14,13 @@
 @import "intro.css";
 
 /* ALL */
-*::-webkit-scrollbar { display: none }
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+*::-webkit-scrollbar {
+  display: none
+}
 html, body {
   width: 100%;
   height: 100%;

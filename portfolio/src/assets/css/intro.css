@@ -1,0 +1,12 @@
+
+section.page-contain h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+section.page-contain p {
+  font-size: 18px;
+  color: rgb(136, 136, 136);
+}
+section.page-contain p > b {
+  color: #000;
+}

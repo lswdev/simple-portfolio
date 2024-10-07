@@ -7,7 +7,7 @@ export const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/enter',
+      path: '/',
       name: 'enter',
       // meta: { CustomPointer: true},
       component: () => import('@/views/Enter.vue'),
@@ -29,7 +29,7 @@ export const router = new VueRouter({
       component: () => import('@/views/About.vue'),
     },{
       path: '/',
-      redirect: '/enter'
+      redirect: '/'
     },
   ]
 });
