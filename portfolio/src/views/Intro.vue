@@ -14,10 +14,13 @@
         </p>
       </div>
 
-      <div class="item-contain">
-        <nav>
-
-        </nav>
+      <div class="item-contain item-row">
+        <div>
+          1
+        </div>
+        <div>
+          2
+        </div>
       </div>
 
     </section>
@@ -26,6 +29,7 @@
 
 <script>
   export default {
+    components: {  },
     data:() => ({
 
     }),

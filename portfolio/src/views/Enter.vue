@@ -5,7 +5,10 @@
       <i style="--clr:#ff0057;"></i>
       <i style="--clr:#fffd44;"></i>
       <div class="custom-area" style="z-index: 100">
-        <h2 class="my-name">Lee Siwoo</h2>
+        <h2 class="my-name">
+          Lee Siwoo
+          <div style="font-size: 0.875rem;">Front-end</div>
+        </h2>
         <div class="inputBx input-intro">
           <button id="intro-submit-btn" @click="changePage">확인하기</button>
         </div>

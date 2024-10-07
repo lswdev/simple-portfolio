@@ -59,7 +59,7 @@ export default {
         this.page = lastPage;
       }
 
-      this.page = Math.max(0, Math.min(this.page, lastPage - 1));
+      this.page = Math.max(0, Math.min(this.page, lastPage));
       wrap.style.top = this.page * -100 + 'vh';
     },
     handleTouchStart(e) {
