@@ -14,13 +14,11 @@
         </p>
       </div>
 
-      <div class="item-contain item-row">
-        <div>
-          1
+      <div class="item-contain item-grid">
+        <div class="grid-contents">
+          글 쓸 곳
         </div>
-        <div>
-          2
-        </div>
+        <div class="grid-picture"></div>
       </div>
 
     </section>

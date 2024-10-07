@@ -1,4 +1,64 @@
 
+#intro-page {
+  border-radius: 60px 60px 0 0;
+}
+#intro-page .item-contain:first-child {
+  padding: 2rem 0;
+}
+
+/* 아이템 요소 컨테이너 */
+#intro-page .item-contain {
+  max-width: 1000px;
+  width: 100%;
+}
+#intro-page .item-grid {
+  border: 1px solid red;
+  width: 100%;
+  display: grid;
+  /*grid-template-columns: repeat(2, 1fr);*/
+  /*grid-template-rows: repeat(1, minmax(100px, auto));*/
+  /*grid-auto-rows: minmax(100px, auto);*/
+  grid-template-areas:
+    "contents picture"
+    "contents picture";
+  grid-template-columns: 1fr 300px;
+}
+.grid-contents {
+  grid-area: contents;
+  /*grid-template-columns: repeat(auto-fill, minmax());*/
+}
+.grid-picture {
+  grid-area: picture;
+  height: 300px;
+  border-radius: 2rem;
+  background: url("../images/profile.jpg") 70% 30% no-repeat;
+  background-size: 140%;
+  filter: brightness(108%) grayscale(18%) hue-rotate(-3deg);
+  image-rendering: auto;
+}
+
+@media (max-width: 1000px) {
+  #intro-page .item-grid {
+    grid-template-areas:
+      "picture picture"
+      "contents contents";
+    grid-template-columns: 1fr; /* 모든 열이 동일한 너비 */
+  }
+  .grid-picture {
+    width: 100%;
+  }
+  .item-grid > div:first-child {
+    order: 2;
+  }
+  .item-grid > div:last-child {
+    order: 1;
+  }
+}
+
+@media all and (max-width: 1032px) {
+
+}
+
 section.page-contain h2 {
   font-size: 40px;
   letter-spacing: -1px;
