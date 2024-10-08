@@ -15,7 +15,7 @@
       </div>
 
       <div class="item-contain">
-        <div class="item-title">
+        <div class="item-title item-grid">
           Experience
         </div>
       </div>

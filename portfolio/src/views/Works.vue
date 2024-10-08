@@ -2,8 +2,10 @@
 <template>
   <div id="work-page">
     <div class="page-contain">
-      <button type="button" @click="showModal">모달 토글</button>
+      <div class="item-contain">
 
+        <button type="button" @click="showModal">모달 토글</button>
+      </div>
       <!--<figure>
         <img src="" alt="">
         <figcaption>이미지 캡션</figcaption>
