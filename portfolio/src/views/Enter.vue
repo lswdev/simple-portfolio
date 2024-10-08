@@ -10,7 +10,7 @@
           <div style="font-size: 0.875rem;">Front-end</div>
         </h2>
         <div class="inputBx input-intro">
-          <button id="intro-submit-btn" @click="changePage">확인하기</button>
+          <button id="intro-submit-btn" @click="slidePage">확인하기</button>
         </div>
       </div>
     </div>
@@ -47,12 +47,12 @@ export default {
     pointerShowAnimation() {
       window.$('.cursor').fadeIn(200);
     },
-    changePage() {
+    slidePage() {
       // this.$router.push('/intro');
       const commonPage = document.getElementsByClassName('common-page')[0];
       commonPage.style.top = -100 + 'vh';
 
-      this.$emit('page-changed');
+      this.$emit('page-slide');
     },
     checkBrowser() {
       this.browserInfo.platform = navigator.platform;

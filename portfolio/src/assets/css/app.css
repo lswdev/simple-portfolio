@@ -16,6 +16,11 @@
 @import "footer.css";
 @import "modal.css";
 
+/* App */
+#app {
+  overflow-x: hidden;
+}
+
 /* ALL */
 * {
   box-sizing: border-box;

@@ -12,14 +12,20 @@
   height: 100vh;
   background-color: #FFF;
 }
-.common-page > div:nth-child(2n) { border: 1px solid green; }
 
 /* 페이지 컨테이너 */
 .page-contain {
+  height: 100%;
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*overflow: auto;*/
+}
+/* 아이템 요소 컨테이너 */
+.item-contain {
+  max-width: 1000px;
+  width: 100%;
 }

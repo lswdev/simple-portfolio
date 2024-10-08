@@ -3,12 +3,18 @@
 }
 
 .work-contain {
+
+}
+
+
+/*  모달 부분  */
+.work-modal {
   width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.work-contain::-webkit-scrollbar {
+.work-modal::-webkit-scrollbar {
   /*display: none;*/
 }

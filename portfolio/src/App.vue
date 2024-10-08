@@ -4,7 +4,7 @@
     <div>
       <div id="enter">
         <template v-if="$route.name==='enter'">
-          <Enter @page-changed="handlePageChange"></Enter>
+          <Enter @page-slide="handlePageSlide"></Enter>
         </template>
       </div>
 
@@ -86,7 +86,7 @@ export default {
 
       wrap.style.top = this.page * -100 + 'vh';
     },
-    handlePageChange() {
+    handlePageSlide() {
       this.page++;
       const wrap = document.getElementsByClassName('common-page')[0];
       wrap.style.top = this.page * -100 + 'vh';

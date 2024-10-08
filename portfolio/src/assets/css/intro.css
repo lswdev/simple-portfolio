@@ -2,14 +2,16 @@
 #intro-page {
   border-radius: 60px 60px 0 0;
 }
-#intro-page .item-contain:first-child {
-  padding: 2rem 0 5rem;
+/* 아이템 타이틀 */
+.item-title {
+  align-self: flex-start;
+  padding-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
-
 /* 아이템 요소 컨테이너 */
-#intro-page .item-contain {
-  max-width: 1000px;
-  width: 100%;
+#intro-page .item-contain:first-child {
+  padding: 2rem 0 3rem;
 }
 #intro-page .item-grid {
   width: 100%;

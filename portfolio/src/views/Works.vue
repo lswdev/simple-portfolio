@@ -1,12 +1,13 @@
 
 <template>
   <div id="work-page">
-    <button type="button" @click="showModal">모달 토글</button>
-    <div>
-      <figure>
+    <div class="page-contain">
+      <button type="button" @click="showModal">모달 토글</button>
+
+      <!--<figure>
         <img src="" alt="">
         <figcaption>이미지 캡션</figcaption>
-      </figure>
+      </figure>-->
     </div>
 
     <Modal @modalClose="closeModal" @modalAction="actionModal"
@@ -15,9 +16,9 @@
            :class="{'show': modalToggle}"
     >
       <!--  슬롯 구조 추가  -->
-      <div class="work-contain">
+      <div class="work-modal">
         <div>
-
+          모달 body 부분
         </div>
       </div>
     </Modal>
