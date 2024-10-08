@@ -1,8 +1,7 @@
 
 <template>
-  <div style="position: relative;">
+  <div id="resume-page" style="position: relative;">
     Resume Page
-
     <Footer></Footer>
   </div>
 </template>

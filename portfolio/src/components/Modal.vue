@@ -4,11 +4,11 @@
 
     <div class="modal-header">
       <div class="modal-title" v-text="modalTitle"></div>
-      <button class="round-x" @click="modalClose"></button>
+      <button type="button" class="round-x" @click="modalClose"></button>
     </div>
 
     <div class="modal-body">
-      <div></div>
+      <slot></slot>
     </div>
 
     <div class="modal-footer">

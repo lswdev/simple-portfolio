@@ -1,7 +1,7 @@
 button {
   padding: 0.5rem 1.25rem;
   border: 1px solid #222;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #FFF;
   outline: none;
   cursor: pointer;
@@ -22,8 +22,16 @@ button[var] {
   border: none;
   color: #FFF;
 }
-button[var="primary"] { background-color: #222; }
-button[var="secondary"] { background-color: #888; }
-button[var="warning"] { background-color: #888; }
-button[var="success"] { background-color: #888; }
-button[var="danger"] { background-color: #888; }
+button[var="primary"] { background-color: #222222; }
+button[var="secondary"] { background-color: #b0b0b0; }
+button[var="warning"] { background-color: #f8c256; }
+button[var="success"] { background-color: #56a7f8; }
+button[var="danger"] { background-color: #f85669; }
+
+/* Action / Animation */
+button:hover {
+  filter: brightness(1.17);
+}
+button:active {
+  filter: brightness(0.975);
+}

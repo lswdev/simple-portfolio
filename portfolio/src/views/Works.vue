@@ -1,11 +1,19 @@
 
 <template>
   <div id="work-page">
-    Works Page
+
+    <div >
+
+    </div>
+
     <Modal @modalClose="closeModal" @modalAction="actionModal"
            :modal-title="modalTitle" :modal-desc="modalDesc"
            :action-btn="actionBtn" :close-btn="closeBtn"
-    ></Modal>
+    >
+      <div class="work-contain">
+        컨테이너
+      </div>
+    </Modal>
   </div>
 </template>
 
