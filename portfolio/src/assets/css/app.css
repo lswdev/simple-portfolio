@@ -12,6 +12,9 @@
 /* components */
 @import "enter.css";
 @import "intro.css";
+@import "works.css";
+@import "footer.css";
+@import "modal.css";
 
 /* ALL */
 * {
