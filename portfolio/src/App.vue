@@ -13,7 +13,6 @@
         <Works></Works>
         <Resume></Resume>
       </div>
-
     </div>
   </div>
 </template>
@@ -59,12 +58,12 @@ export default {
         this.page = lastPage;
       }
 
-      const pointer = document.querySelector('.cursor-custom');
-      if (this.page !== 0) {
-        pointer.style.zIndex = 1000;
-      } else {
-        pointer.style.zIndex = 0;
-      }
+      // const pointer = document.querySelector('.cursor-custom');
+      // if (this.page !== 0) {
+      //   pointer.style.zIndex = 1000;
+      // } else {
+      //   pointer.style.zIndex = 0;
+      // }
 
       this.page = Math.max(0, Math.min(this.page, lastPage));
 
