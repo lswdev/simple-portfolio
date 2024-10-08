@@ -1,3 +1,14 @@
 #work-page {
   position: relative;
 }
+
+.work-contain {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.work-contain::-webkit-scrollbar {
+  /*display: none;*/
+}

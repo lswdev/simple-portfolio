@@ -1,17 +1,24 @@
 
 <template>
   <div id="work-page">
-
-    <div >
-
+    <button type="button" @click="showModal">모달 토글</button>
+    <div>
+      <figure>
+        <img src="" alt="">
+        <figcaption>이미지 캡션</figcaption>
+      </figure>
     </div>
 
     <Modal @modalClose="closeModal" @modalAction="actionModal"
            :modal-title="modalTitle" :modal-desc="modalDesc"
            :action-btn="actionBtn" :close-btn="closeBtn"
+           :class="{'show': modalToggle}"
     >
+      <!--  슬롯 구조 추가  -->
       <div class="work-contain">
-        컨테이너
+        <div>
+
+        </div>
       </div>
     </Modal>
   </div>
@@ -26,15 +33,19 @@ export default {
     modalDesc: '프로젝트 관련 정보 제공',
     actionBtn: '확인',
     closeBtn: '취소',
+    modalToggle: false,
   }),
   methods: {
+    showModal() {
+      this.modalToggle = !this.modalToggle;
+    },
     actionModal({event}) {
-      console.log('Action 버튼 클릭');
       console.log(event);
+      this.modalToggle = false;
     },
     closeModal({event}) {
-      console.log('닫기 버튼 클릭');
       console.log(event);
+      this.modalToggle = false;
     },
   }
 }

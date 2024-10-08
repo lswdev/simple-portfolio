@@ -4,11 +4,24 @@
   height: 80vh;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 100%;
+  z-index: 102;
   transform: translate(-50%, -50%);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
   border-radius: 1rem;
   padding: 1rem;
+  transition: 0.4s ease all;
+  opacity: 0;
+  background-color: #FFF;
+}
+
+#modal.show {
+  left: 50%;
+  opacity: 1;
+}
+
+.modal-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
