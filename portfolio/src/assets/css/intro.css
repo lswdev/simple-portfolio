@@ -23,11 +23,39 @@
   gap: 0 1rem;
 }
 .grid-contents {
+  height: 50vh;
   grid-area: contents;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-y: scroll;
 }
+
+/* 스크롤바 커스텀 */
+.grid-contents::-webkit-scrollbar {
+  display: block !important;
+  width: 5px;
+  height: 5px;
+}
+
+.grid-contents::-webkit-scrollbar-thumb {
+  height: 40%;
+  cursor: pointer;
+  /* 스크롤바 색상 */
+  background-image: -webkit-gradient(linear,
+  100% 0%,
+  0% 100%,
+  from(#FFF),
+  to(#FFF),
+  color-stop(.5, #343834));
+  border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+.grid-contents::-webkit-scrollbar-track {
+  background: #FFF;  /*스크롤바 뒷 배경 색상*/
+  border-radius: 10px;
+}
+
 .grid-contents > .exp {
   display: flex;
   flex-direction: row;
@@ -57,15 +85,52 @@
   image-rendering: auto;
 }
 
+section.page-contain h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+section.page-contain p {
+  font-size: 18px;
+  color: rgb(136, 136, 136);
+  word-break: keep-all;
+}
+section.page-contain p > b {
+  color: #000;
+}
+
 @media (max-width: 1000px) {
+  #intro-page {
+    height: auto;
+  }
   #intro-page .item-grid {
     grid-template-areas:
       "picture picture"
       "contents contents";
     grid-template-columns: 1fr; /* 모든 열이 동일한 너비 */
   }
+  #intro-page .item-contain:first-child {
+    padding: 1.5rem 0 2rem;
+  }
+  section.page-contain h2 {
+    font-size: 30px;
+  }
+  section.page-contain p {
+    font-size: 16px;
+  }
+  .grid-contents {
+    margin-top: 2rem;
+  }
+  .grid-contents > .exp {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    padding-top: 1.2rem;
+  }
   .grid-picture {
     width: 100%;
+    height: 150px;
+    background-size: 100%;
   }
   .item-grid > div:first-child {
     order: 2;
@@ -75,18 +140,9 @@
   }
 }
 
-@media all and (max-width: 1032px) {
-
+@media all and (max-width: 1000px) {
+  .page-contain {
+    padding: 1rem 1.785rem;
+  }
 }
 
-section.page-contain h2 {
-  font-size: 40px;
-  letter-spacing: -1px;
-}
-section.page-contain p {
-  font-size: 18px;
-  color: rgb(136, 136, 136);
-}
-section.page-contain p > b {
-  color: #000;
-}

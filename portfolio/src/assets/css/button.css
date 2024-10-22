@@ -35,3 +35,7 @@ button:hover {
 button:active {
   filter: brightness(0.975);
 }
+
+#intro-submit-btn {
+  background-color: #020c0b;
+}

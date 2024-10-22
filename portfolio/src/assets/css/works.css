@@ -11,20 +11,6 @@
   grid-template-columns: 1fr 300px;
   gap: 0 1rem;
 }
-.grid-contents {
-  grid-area: contents;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.grid-contents > .exp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  color: #888;
-}
 
 
 /*  모달 부분  */
@@ -37,4 +23,15 @@
 }
 .work-modal::-webkit-scrollbar {
   /*display: none;*/
+}
+.works-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.works-grid > div {
+  width: calc(100%/2);
+  border: 1px solid black;
+  box-sizing: border-box;
 }

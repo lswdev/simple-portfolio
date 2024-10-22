@@ -2,8 +2,14 @@
 <template>
   <div id="work-page">
     <div class="page-contain">
-      <div class="item-contain">
-
+      <div class="item-contain" style="padding-top: 4rem">
+        <div class="item-title item-grid"> Works </div>
+        <div class="works-grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <button type="button" @click="showModal">모달 토글</button>
       </div>
       <!--<figure>

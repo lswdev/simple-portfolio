@@ -138,3 +138,13 @@
     padding: 8px 14px;
   }
 }
+@media all and (max-width: 400px) {
+  .custom-area h2.my-name {
+    margin-top: 0;
+    margin-bottom: 1.125rem;
+    font-size: 1.425rem;
+  }
+  .custom-area .inputBx button {
+    margin-top: 0.5rem;
+  }
+}

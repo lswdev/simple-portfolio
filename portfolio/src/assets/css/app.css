@@ -27,7 +27,7 @@
   -webkit-font-smoothing: inherit;
 }
 *::-webkit-scrollbar {
-  display: none
+  display: none;
 }
 html, body {
   width: 100%;
