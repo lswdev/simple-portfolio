@@ -79,8 +79,8 @@
   grid-area: picture;
   height: 300px;
   border-radius: 2rem;
-  background: url("../images/profile.jpg") 70% 30% no-repeat;
-  background-size: 140%;
+  background: url("../images/profile2.jpg") 50% 20% no-repeat;
+  background-size: 100%;
   filter: brightness(108%) grayscale(18%) hue-rotate(-3deg);
   image-rendering: auto;
 }
@@ -130,7 +130,9 @@ section.page-contain p > b {
   .grid-picture {
     width: 100%;
     height: 150px;
+    background-image: url("../images/forest.jpg");
     background-size: 100%;
+    background-position: 50% 63%;
   }
   .item-grid > div:first-child {
     order: 2;
