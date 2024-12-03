@@ -10,8 +10,8 @@
 
       <div class="common-page">
         <Intro></Intro>
+        <Educate></Educate>
         <Works></Works>
-        <Resume></Resume>
       </div>
     </div>
   </div>
@@ -21,10 +21,10 @@
 import Enter from '@/views/Enter.vue';
 import Intro from '@/views/Intro.vue';
 import Works from '@/views/Works.vue';
-import Resume from '@/views/Resume.vue';
+import Educate from '@/views/Educate.vue';
 
 export default {
-  components: { Enter, Intro, Works, Resume },
+  components: { Enter, Intro, Works, Educate },
   data: () => ({
     page: 0,
     startY: 0,

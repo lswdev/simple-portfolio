@@ -29,9 +29,11 @@
   flex-flow: row wrap;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 .works-grid > div {
-  width: calc(100%/2);
+  /*width: calc(100%/2);*/
+  width: 100%;
   border: 1px solid black;
   box-sizing: border-box;
 }
