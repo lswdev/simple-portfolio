@@ -1,5 +1,7 @@
 /* animation */
 #enter {
+  position: relative;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,6 +122,13 @@
 }
 .custom-area .inputBx button::placeholder {
   color: rgba(255, 255, 255, 0.75);
+}
+
+@media all and (max-width: 1000px) {
+  .ring {
+    max-width: 500px;
+    max-height: 500px;
+  }
 }
 
 @media all and (max-width: 640px) {

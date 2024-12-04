@@ -10,8 +10,8 @@ function newPointerAnimation() {
   let mouseX = 100;
   let mouseY = 100;
 
-  let ballX = 0;
-  let ballY = 0;
+  let ballX = 100;
+  let ballY = 100;
 
   let speed = 0.2;  //how fast ball catches up to mouse pointer;
 

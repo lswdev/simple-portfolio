@@ -28,6 +28,7 @@ export default {
       userInfo: '',
     }),
     deviceInfo: '',
+    pointerAnimation: [],
   }),
   methods: {
     isMobile() {

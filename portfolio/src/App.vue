@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <div class="cursor-custom" v-if="$route.name==='enter'"></div>
+    <div class="cursor-custom"></div>
     <div>
       <div id="enter">
-        <template v-if="$route.name==='enter'">
-          <Enter></Enter><!-- @page-slide="handlePageSlide"-->
-        </template>
+        <Enter></Enter><!-- @page-slide="handlePageSlide"-->
       </div>
 
       <div class="common-page">
@@ -31,7 +29,7 @@ export default {
     isScreenSmall: false,
   }),
   mounted() {
-    this.checkScreenWidth(); // 처음 로딩 시 화면 크기 확인
+    // this.checkScreenWidth(); // 처음 로딩 시 화면 크기 확인
     window.addEventListener('resize', this.checkScreenWidth); // 창 크기 변경 시 이벤트 리스너 추가
     if (!this.isScreenSmall) {
       // window.addEventListener('wheel', this.handleWheel, {passive: false});
