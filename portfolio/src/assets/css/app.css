@@ -12,6 +12,7 @@
 /* components */
 @import "enter.css";
 @import "intro.css";
+@import "educate.css";
 @import "works.css";
 @import "footer.css";
 @import "modal.css";
@@ -67,7 +68,7 @@ table {
   transform: translate(-50%,-50%) scale(1);
   /*animation: pulse .5s cubic-bezier(.51,0,0.4,.5) alternate infinite;*/
 }
-/*.cursor-custom.active { animation:bounce .5s ease; }*/
+.cursor-custom.active { animation:bounce .5s ease; }
 
 /*  플로팅 네비게이션  */
 .float-nav {
@@ -75,18 +76,18 @@ table {
 
   position: fixed;
   right: 1rem;
-  bottom: 1rem;
+  bottom: 60px;
   z-index: 102;
 
   background-color: rgba(117, 186, 130, 0.04);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   mix-blend-mode: difference;
-  transition: background-color 0.3s, color 0.3s;
+  transition: 0.3s ease all;
 }
 .float-nav ul {
   padding: 0.6rem 0.6rem;
-  backdrop-filter: invert(0.6);
+  /*backdrop-filter: invert(0.6);*/
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -100,6 +101,17 @@ table {
 .float-nav li:hover {
   color: #eee;
 }
+.float-nav-line {
+  width: 3px;
+  height: 50%;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+}
 
 @keyframes pulse {
   from { width:50px; height:50px; }
@@ -110,10 +122,18 @@ table {
   0%{ transform: translate(-50%,-50%) scale(1); opacity:1; }
 }
 
-
 @media all and (max-width: 1000px) {
   .cursor-custom {
     display: none;
   }
 }
 
+@media all and (max-width: 768px) {
+  .float-nav.hide {
+    transform: translateX(93px);
+  }
+  .float-nav:not(.hide) {
+    background-color: rgba(218, 30, 218, 0.5);
+    color: #000;
+  }
+}

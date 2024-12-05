@@ -1,0 +1,38 @@
+#education-page {
+  position: relative;
+}
+#education-page .item-contain {
+  height: 100%;
+}
+#education-page .item-contain .item-title {
+  padding-top: 4rem;
+}
+
+#education-page .works-grid {
+  height: 50%;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+/* 스크롤바 커스텀 */
+#education-page .works-grid::-webkit-scrollbar {
+  display: block !important;
+  width: 6px;
+  height: 5px;
+}
+#education-page .works-grid::-webkit-scrollbar-thumb {
+  height: 40%;
+  cursor: pointer;
+  /* 스크롤바 색상 */
+  background-image: -webkit-gradient(linear,
+  100% 0%,
+  0% 100%,
+  from(rgba(52, 56, 52, 0.18)),
+  to(rgba(52, 56, 52, 0.18)),
+  color-stop(.5, #343834));
+  border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+#education-page .works-grid::-webkit-scrollbar-track {
+  background: #FFF;  /*스크롤바 뒷 배경 색상*/
+  border-radius: 10px;
+}

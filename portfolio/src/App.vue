@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div class="cursor-custom"></div>
-    <div class="float-nav">
+    <div class="float-nav" :class="{ hide: isNavToggle }">
+      <div class="float-nav-line" @click="navToggle"></div>
       <ul>
         <li v-for="(item, index) in navList" :key="index" @click="floatNavClick(index)">{{ item }}</li>
       </ul>
@@ -31,6 +32,7 @@ export default {
   data: () => ({
     page: 0,
     isScreenSmall: false,
+    isNavToggle: true,
     navList: ['Enter', 'Intro', 'Educates', 'Works'],
   }),
   methods: {
@@ -50,6 +52,9 @@ export default {
       } else if (target && target.scrollIntoView) {
         target.scrollIntoView({ behavior: "smooth" });
       }
+    },
+    navToggle() {
+      this.isNavToggle = !this.isNavToggle;
     },
   },
 }

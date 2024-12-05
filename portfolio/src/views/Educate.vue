@@ -1,21 +1,20 @@
 
 <template>
-  <div id="education-page" style="position: relative;">
+  <div id="education-page">
     <div class="page-contain">
-      <div class="item-contain" style="padding-top: 4rem">
+      <div class="item-contain">
         <div class="item-title item-grid"> Educations </div>
         <div class="works-grid">
-          <div>
-            asdfasdf
-          </div>
-          <div>
-            asdfasdf
-          </div>
-          <div>
-            asdfasdf
-          </div>
-          <div>
-            asdfasdf
+          <div class="work-card" v-for="(item, index) in eduList" :key="index">
+            <div><!-- card 내용 -->
+              <div class="card-date">{{ item.eduDt }}</div>
+              <div class="card-name">{{ item.eduNm }}</div>
+              <div class="card-company">{{ item.eduComp }}</div>
+            </div>
+            <div><!-- card Icon -->
+              <span v-for="(skill, i) in item.eduSkill" :key="i">{{ skill }}</span>
+            </div>
+<!--            <div v-html="item.eduDesc"></div>-->
           </div>
         </div>
       </div>
@@ -24,8 +23,11 @@
 </template>
 
 <script>
+import { educations } from "@/myInfo";
 
 export default {
-
+  data:() =>  ({
+    eduList: educations
+  }),
 }
 </script>
