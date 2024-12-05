@@ -42,7 +42,7 @@ const educations = [
       Ajax - 초급<br>
       SCSS - 초급
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'HTML', 'CSS', "CSS", 'jQuery'],
   }, {
     eduNm: '누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌',
     eduDt: '2022.01 ~ 2022.02',

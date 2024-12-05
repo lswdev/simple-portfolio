@@ -4,8 +4,8 @@
     <div class="page-contain">
       <div class="item-contain">
         <div class="item-title item-grid"> Educations </div>
-        <div class="works-grid">
-          <div class="work-card" v-for="(item, index) in eduList" :key="index">
+        <div class="educate-grid">
+          <div class="educate-card" v-for="(item, index) in eduList" :key="index">
             <div><!-- card 내용 -->
               <div class="card-date">{{ item.eduDt }}</div>
               <div class="card-name">{{ item.eduNm }}</div>
