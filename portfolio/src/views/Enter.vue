@@ -43,16 +43,12 @@ export default {
       this.deviceInfo = flag;
     },
     pointerHideAnimation() {
-      window.$('.cursor').fadeOut(200);
+      window.$('.cursor-custom').fadeOut(200);
     },
     pointerShowAnimation() {
-      window.$('.cursor').fadeIn(200);
+      window.$('.cursor-custom').fadeIn(200);
     },
     slidePage() {
-      // this.$router.push('/intro');
-      const commonPage = document.getElementsByClassName('common-page')[0];
-      commonPage.style.top = -100 + 'vh';
-
       this.$emit('page-slide');
     },
     checkBrowser() {
