@@ -3,13 +3,15 @@
 }
 #education-page .item-contain {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #education-page .item-contain .item-title {
   padding-top: 4rem;
 }
 
 #education-page .educate-grid {
-  height: 50%;
+  flex: 1;
   overflow-y: scroll;
   padding-right: 1rem;
 }
@@ -23,6 +25,7 @@
 .educate-card {
   width: 100%;
   min-height: 200px;
+  height: fit-content;
   display: flex;
   gap: 1.2rem;
   padding: 1.325rem 1.25rem;
@@ -87,4 +90,13 @@
 #education-page .educate-grid::-webkit-scrollbar-track {
   background: #FFF;  /*스크롤바 뒷 배경 색상*/
   border-radius: 10px;
+}
+
+@media all and (max-width:768px) {
+  .educate-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .educate-card {
+    min-height: 150px;
+  }
 }
