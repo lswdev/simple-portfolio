@@ -42,7 +42,7 @@ const educations = [
       Ajax - 초급<br>
       SCSS - 초급
     `,
-    eduSkill: ['vue', 'HTML', 'CSS', "CSS", 'jQuery'],
+    eduSkill: ['vue', 'html', 'css', "sass", 'jquery', 'javascript', 'github'],
   }, {
     eduNm: '누구든지 하는 리액트: 초심자를 위한 react 핵심 강좌',
     eduDt: '2022.01 ~ 2022.02',
@@ -57,7 +57,7 @@ const educations = [
       - shouldComponentUpdate를 이용한 최적화<br>
       - Ref를 사용한 DOM 접근 방법
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['html', 'css', 'react'],
   }, {
     eduNm: '자바(JAVA)프로그래밍 입문',
     eduDt: '2022.03 ~ 2022.04',
@@ -139,7 +139,7 @@ const educations = [
       - JS로 Motion Path 제어하기<br>
       - 스크롤 타임라인에 대한 이해와 코드 실습
     `,
-    eduSkill: ['HTML', 'CSS', 'Illustrator'],
+    eduSkill: ['html', 'css'],
   }, {
     eduNm: 'Vue.js 끝장내기 - 실무에 필요한 모든 것',
     eduDt: '2024.04 ~ 2024.07',
