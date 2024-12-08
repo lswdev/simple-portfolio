@@ -42,12 +42,6 @@ export default {
       ) { flag = true; }
       this.deviceInfo = flag;
     },
-    pointerHideAnimation() {
-      window.$('.cursor-custom').fadeOut(200);
-    },
-    pointerShowAnimation() {
-      window.$('.cursor-custom').fadeIn(200);
-    },
     slidePage() {
       this.$emit('page-slide');
     },
