@@ -112,7 +112,7 @@
   transition: 0.3s ease all;
   /*transition-delay: 0.3s;*/
 }
-.enter-view:hover .inputBx button {
+.custom-area:hover .inputBx button {
   opacity: 1;
 }
 .custom-area .inputBx button:hover {
