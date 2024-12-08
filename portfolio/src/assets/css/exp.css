@@ -1,8 +1,8 @@
-#work-page {
+#exp-page {
   position: relative;
 }
 
-#work-page .item-grid {
+#exp-page .item-grid {
   width: 100%;
   display: grid;
   grid-template-areas:
@@ -14,13 +14,13 @@
 
 
 /*  모달 부분  */
-.work-modal {
+.exp-modal {
   width: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.work-modal::-webkit-scrollbar {
+.exp-modal::-webkit-scrollbar {
   /*display: none;*/
 }

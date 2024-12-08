@@ -24,7 +24,7 @@
 <script>
 import Enter from '@/views/Enter.vue';
 import Intro from '@/views/Intro.vue';
-import Works from '@/views/Works.vue';
+import Works from '@/views/Experience.vue';
 import Educate from '@/views/Educate.vue';
 
 export default {
@@ -33,7 +33,7 @@ export default {
     page: 0,
     isScreenSmall: false,
     isNavToggle: true,
-    navList: ['Enter', 'Intro', 'Educates', 'Works'],
+    navList: ['Enter', 'Project', 'Education', 'Experience'],
   }),
   methods: {
     handlePageSlide() {

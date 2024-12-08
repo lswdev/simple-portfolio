@@ -19,7 +19,7 @@ export const router = new VueRouter({
     // },{
     //   path: '/works',
     //   name: 'works',
-    //   component: () => import('@/views/Works.vue'),
+    //   component: () => import('@/views/Experience.vue'),
     // },{
     //   path: '/educate',
     //   name: 'educate',

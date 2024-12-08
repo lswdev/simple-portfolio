@@ -3,7 +3,7 @@
   <div id="education-page">
     <div class="page-contain">
       <div class="item-contain">
-        <div class="item-title item-grid"> Educations </div>
+        <div class="item-title item-grid"> Education </div>
         <div class="educate-grid">
           <div class="educate-card" v-for="(item, index) in eduList" :key="index">
             <div><!-- card 내용 -->

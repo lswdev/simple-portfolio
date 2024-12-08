@@ -5,22 +5,20 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 3rem;
 }
 #education-page .item-contain .item-title {
   padding-top: 4rem;
 }
 
-#education-page .educate-grid {
-  flex: 1;
-  overflow-y: scroll;
-  padding-right: 1rem;
-}
-
 .educate-grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  padding-bottom: 1rem;
+  gap: 50px;
+
+  overflow-y: scroll;
+  padding: 1rem 1rem 1rem 0;
 }
 .educate-card {
   width: 100%;
@@ -30,8 +28,21 @@
   gap: 1.2rem;
   padding: 1.325rem 1.25rem;
   will-change: auto;
-  background-color: rgba(238, 238, 238, 0.49);
   border-radius: 32px;
+  border: 3px solid rgba(238, 238, 238, 0.49);
+  box-sizing: border-box;
+
+}
+.educate-card:hover {
+  animation: cardHover 0.3s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border: 3px solid rgba(204, 206, 203, 0.49);
+}
+@keyframes cardHover {
+  0% { border-radius: 32px; }
+  50% { border-radius: 6px; }
+  100% { border-radius: 32px; }
 }
 .educate-card > div:first-child {
   flex: 1;
@@ -47,7 +58,7 @@
   align-items: flex-start;
   gap: 5px;
 
-  background-color: #FFF;
+  background-color: rgba(238, 238, 238, 0.49);
   border-radius: 24px;
   padding: 10px;
 }
@@ -60,13 +71,19 @@
   object-fit: cover;
 }
 .educate-card .card-date {
-
+  font-size: 12px;
+  color: #888888;
 }
 .educate-card .card-name {
-
+  font-size: 20px;
+  color: #000000;
+  word-break: keep-all;
+  letter-spacing: -0.075rem;
+  padding: 10px 0 6px;
 }
 .educate-card .card-company {
-
+  font-size: 14px;
+  color: #888888;
 }
 
 /* 스크롤바 커스텀 */
@@ -92,11 +109,41 @@
   border-radius: 10px;
 }
 
+@media all and (max-width: 1000px) {
+  #education-page .educate-grid::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
 @media all and (max-width:768px) {
   .educate-grid {
     grid-template-columns: repeat(1, 1fr);
   }
   .educate-card {
     min-height: 150px;
+  }
+  .educate-card > div:last-child {
+    width: auto;
+    min-width: 50px;
+  }
+}
+
+@media all and (max-width:600px) {
+  .educate-grid {
+    gap: 30px;
+  }
+  .educate-card {
+    min-height: unset;
+    flex-direction: column;
+  }
+  .educate-card .card-name {
+    padding: 6px 0;
+  }
+  .educate-card > div:first-child {
+    min-width: 200px;
+  }
+  .educate-card > div:last-child {
+    width: fit-content;
+    justify-content: flex-start;
   }
 }
