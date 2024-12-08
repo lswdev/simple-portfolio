@@ -4,9 +4,10 @@
     <div class="page-contain">
       <div class="item-contain" style="padding-top: 4rem">
         <div class="item-title item-grid"> Experience </div>
-        <div class="exps-grid">
+        <div class="exp-grid">
           <div>
-            asdfasdf
+            <div>asdfasdf 1111</div>
+            <div>asdfasdf 2222</div>
           </div>
           <div>
             asdfasdf
