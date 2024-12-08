@@ -57,7 +57,7 @@ const educations = [
       - shouldComponentUpdate를 이용한 최적화<br>
       - Ref를 사용한 DOM 접근 방법
     `,
-    eduSkill: ['html', 'css', 'react'],
+    eduSkill: ['react', 'html', 'css', 'javascript'],
   }, {
     eduNm: '자바(JAVA)프로그래밍 입문',
     eduDt: '2022.03 ~ 2022.04',
@@ -66,7 +66,7 @@ const educations = [
       - JAVA 기본 문법 이해<br>
       - 클래스, 인터페이스, 상속, JDBC, 네트워크 등의 API 이용
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['java'],
   }, {
     eduNm: 'Vue.js 시작하기 - Age of Vue.js',
     eduDt: '2023.05 ~ 2023.07',
@@ -74,7 +74,7 @@ const educations = [
     eduDesc: `
       
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'npm', 'html', 'css', 'javascript'],
   }, {
     eduNm: 'Vue.js 중급 강좌 - 웹앱 제작으로 배워보는 Vue.js, ES6, Vuex',
     eduDt: '2023.08 ~ 2023.11',
@@ -85,7 +85,7 @@ const educations = [
       - Vuex (state, getters, mutations, actions, modules 등)에 대한 이해<br>
       - 구조 문제점 진단 및 리팩토링
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'npm', 'html', 'css', 'javascript'],
   }, {
     eduNm: '프론트엔드 개발자를 위한 웹팩',
     eduDt: '2023.11 ~ 2024.01',
@@ -95,7 +95,7 @@ const educations = [
       - 웹팩의 주요 속성( entry, output, loader, plugin)에 대한 이해<br>
       - 바벨과 ES6 모듈 문법 실습
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'npm', 'node', 'webpack', 'eslint'],
   }, {
     eduNm: 'Kubernetes 운영과 활용',
     eduDt: '2024.03 ~ 2024.03\n',
@@ -108,7 +108,7 @@ const educations = [
       - Service 활용하기<br>
       - Controllor 다루기
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['kubenetes', 'linux'],
   }, {
     eduNm: 'Vue.js 완벽 가이드 - 실습과 리팩토링으로 배우는 실전 개념',
     eduDt: '2024.02 ~ 2024.04',
@@ -123,7 +123,7 @@ const educations = [
       - 외부 라이브러리를 프로젝트에 결합하는 방법<br>
       - 뷰 컴포넌트 Design Pattern
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'npm', 'html', 'css', 'javascript'],
   }, {
     eduNm: '웹 애니메이션의 새로운 표준, Web Animations API ',
     eduDt: '2024.05 ~ 2024.05',
@@ -139,7 +139,7 @@ const educations = [
       - JS로 Motion Path 제어하기<br>
       - 스크롤 타임라인에 대한 이해와 코드 실습
     `,
-    eduSkill: ['html', 'css'],
+    eduSkill: ['html', 'css', 'javascript'],
   }, {
     eduNm: 'Vue.js 끝장내기 - 실무에 필요한 모든 것',
     eduDt: '2024.04 ~ 2024.07',
@@ -157,7 +157,7 @@ const educations = [
       - 라우터 내비게이션 가드에 대한 이해<br>
       - Jest를 이용한 테스트 코드 작성
     `,
-    eduSkill: ['vue'],
+    eduSkill: ['vue', 'npm', 'jest', 'eslint', 'html', 'css', 'javascript'],
   },
 ]
 

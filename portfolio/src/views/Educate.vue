@@ -12,7 +12,7 @@
               <div class="card-company">{{ item.eduComp }}</div>
             </div>
             <div><!-- card Icon -->
-              <span v-for="(skill, i) in item.eduSkill" :key="i">
+              <span v-for="(skill, i) in item.eduSkill" :key="i" :title="skill">
                 <img :src="require(`@/assets/icon/${skill}.png`)" :alt="`${skill} 아이콘`">
               </span>
             </div>
