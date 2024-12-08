@@ -32,7 +32,7 @@
 /* 스크롤바 커스텀 */
 .grid-contents::-webkit-scrollbar {
   display: block !important;
-  width: 8px;
+  width: 6px;
   height: 5px;
 }
 
@@ -43,8 +43,8 @@
   background-image: -webkit-gradient(linear,
   100% 0%,
   0% 100%,
-  from(#FFF),
-  to(#FFF),
+  from(rgba(52, 56, 52, 0.18)),
+  to(rgba(52, 56, 52, 0.18)),
   color-stop(.5, #343834));
   border-radius: 10px; /* 스크롤바 둥근 테두리 */
 }
