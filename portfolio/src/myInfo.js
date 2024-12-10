@@ -169,11 +169,11 @@ const experiences = [
     expDt: '2023.07 ~ 현재', // 프로젝트 기간
     expComp: '케이원㈜',  // 발주처
     expContent: ``,
-    expImgUrl: 'https://kddx-mngd.k-one.co.kr/img/logo.png',
+    expImgUrl: 'https://kddx-portal.k-one.co.kr/img/logo.png',
     ContentImgUrl: [
-      'https://kddx-mngd.k-one.co.kr/img/logo.png',
-      'https://kddx-mngd.k-one.co.kr/img/logo.png',
-      'https://kddx-mngd.k-one.co.kr/img/logo.png'
+      'https://kddx-portal.k-one.co.kr/img/logo.png',
+      'https://kddx-portal.k-one.co.kr/img/logo.png',
+      'https://kddx-portal.k-one.co.kr/img/logo.png'
     ],
     bgColor: 'black',  // 'black', 'gray', 'light-gray', 'white'
   }, {
