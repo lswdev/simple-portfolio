@@ -15,7 +15,8 @@
       <div class="common-page">
         <Intro ref="introPage"></Intro>
         <Educate ref="educatePage"></Educate>
-        <Works ref="workPage"></Works>
+        <Experience ref="expPage"></Experience>
+        <Footer></Footer>
       </div>
     </div>
   </div>
@@ -24,16 +25,17 @@
 <script>
 import Enter from '@/views/Enter.vue';
 import Intro from '@/views/Intro.vue';
-import Works from '@/views/Experience.vue';
 import Educate from '@/views/Educate.vue';
+import Experience from '@/views/Experience.vue';
+import Footer from "@/views/Footer.vue";
 
 export default {
-  components: { Enter, Intro, Works, Educate },
+  components: {Footer, Enter, Intro, Educate, Experience },
   data: () => ({
     page: 0,
     isScreenSmall: false,
     isNavToggle: true,
-    navList: ['Enter', 'Project', 'Education', 'Experience'],
+    navList: ['Enter', 'Service', 'Education', 'Experience'],
   }),
   methods: {
     handlePageSlide() {
@@ -44,7 +46,7 @@ export default {
       }
     },
     floatNavClick(index) {
-      const viewRefs = [this.$refs.enterPage, this.$refs.introPage, this.$refs.educatePage, this.$refs.workPage];
+      const viewRefs = [this.$refs.enterPage, this.$refs.introPage, this.$refs.educatePage, this.$refs.expPage];
       const target = viewRefs[index];
 
       if (target && target.$el) {

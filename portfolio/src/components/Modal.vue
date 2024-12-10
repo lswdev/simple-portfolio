@@ -1,7 +1,7 @@
 
 <template>
-  <div id="modal" role="dialog" :aria-labelledby="modalTitle" :aria-describedby="modalDesc">
-    <div class="modal-container">
+  <div id="modal" role="dialog" :aria-labelledby="modalTitle" :aria-describedby="modalDesc" ref="modal">
+    <div class="modal-container" @click.stop>
       <div class="modal-header">
         <div class="modal-title" v-text="modalTitle"></div>
         <button type="button" class="round-x" @click="modalClose"></button>

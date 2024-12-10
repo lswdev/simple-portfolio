@@ -1,7 +1,12 @@
 #exp-page {
   position: relative;
 }
-
+#exp-page .item-contain {
+  flex: 1;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
 #exp-page .item-grid {
   width: 100%;
   display: grid;
@@ -11,10 +16,18 @@
   grid-template-columns: 1fr 300px;
   gap: 0 1rem;
 }
-
-.exp-grid > div {
+.exp-grid {
+  flex: 1;
+  overflow-y: scroll;
+}
+.exp-grid > div.exp-card {
+  height: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  border: 1px solid black;
+  border-radius: 13px;
+  margin: 1rem 0;
 }
 
 

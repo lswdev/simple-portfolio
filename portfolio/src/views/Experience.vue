@@ -2,24 +2,31 @@
 <template>
   <div id="exp-page">
     <div class="page-contain">
-      <div class="item-contain" style="padding-top: 4rem">
+      <div class="item-contain">
         <div class="item-title item-grid"> Experience </div>
         <div class="exp-grid">
-          <div>
+          <div class="exp-card">
             <div>asdfasdf 1111</div>
             <div>asdfasdf 2222</div>
           </div>
-          <div>
-            asdfasdf
+
+          <div class="exp-card">
+            <div>asdfasdf 1111</div>
+            <div>asdfasdf 2222</div>
           </div>
-          <div>
-            asdfasdf
+
+          <div class="exp-card">
+            <div>asdfasdf 1111</div>
+            <div>asdfasdf 2222</div>
           </div>
-          <div>
-            asdfasdf
+
+          <div class="exp-card">
+            <div>asdfasdf 1111</div>
+            <div>asdfasdf 2222</div>
           </div>
+
+          <button type="button" @click="showModal">모달 토글</button>
         </div>
-        <button type="button" @click="showModal">모달 토글</button>
       </div>
       <!--<figure>
         <img src="" alt="">
@@ -39,15 +46,13 @@
         </div>
       </div>
     </Modal>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Modal from '@/components/Modal.vue';
-import Footer from '@/views/Footer.vue';
 export default {
-  components: { Modal, Footer },
+  components: { Modal },
   data:() => ({
     modalTitle: 'Experience',
     modalDesc: '프로젝트 관련 정보 제공',

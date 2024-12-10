@@ -12,7 +12,7 @@
       </div>
 
       <div class="item-contain">
-        <div class="item-title item-grid">Project</div>
+        <div class="item-title item-grid">Service</div>
       </div>
 
       <div class="item-contain item-grid">

@@ -1,6 +1,6 @@
 <template>
   <div class="enter-view">
-    <div class="ring" @mouseenter="pointerHideAnimation" @mouseleave="pointerShowAnimation">
+    <div class="ring"><!-- @mouseenter="pointerHideAnimation" @mouseleave="pointerShowAnimation"-->
       <i style="--clr:#27fd01;"></i>
       <i style="--clr:#ff0057;"></i>
       <i style="--clr:#fffd44;"></i>
