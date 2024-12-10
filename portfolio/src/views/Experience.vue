@@ -31,9 +31,7 @@
            :class="{'show': modalToggle}" >
       <!--  슬롯 구조 추가  -->
       <div class="exp-modal">
-        <div v-html="modalContent">
-
-        </div>
+        <div v-html="modalContent"></div>
         <div v-for="(item, index) in expContentImages" :key="index">
           <img :src="item" alt="프로젝트 이미지">
         </div>

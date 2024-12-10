@@ -86,6 +86,24 @@ table {
   mix-blend-mode: difference;
   transition: 0.3s ease all;
 }
+.float-nav.hide {
+  transform: translateX(110px);
+  animation: clickMe ease infinite;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.float-nav:not(.hide) {
+  color: #000;
+  animation: unset;
+}
+.float-nav.hide:hover {
+  animation-name: none;
+}
+@keyframes clickMe {
+  0% { transform: translateX(110px); }
+  50% { transform: translateX(95px); }
+  100% { transform: translateX(110px); }
+}
 .float-nav ul {
   padding: 0.6rem 0.6rem;
   /*backdrop-filter: invert(0.6);*/
@@ -102,15 +120,20 @@ table {
   color: #eee;
 }
 .float-nav-line {
-  width: 3px;
+  width: 4px;
   height: 50%;
   position: absolute;
   right: 100%;
   top: 50%;
+  will-change: transform;
+  transition: 0.3s ease all;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px 0 0 3px;
   cursor: pointer;
+}
+.float-nav-line:hover {
+  background-color: rgb(217, 236, 241);
 }
 
 /* Background Color */
@@ -143,11 +166,7 @@ table {
 }
 
 @media all and (max-width: 768px) {
-  .float-nav.hide {
-    transform: translateX(93px);
-  }
   .float-nav:not(.hide) {
     background-color: rgba(218, 30, 218, 0.5);
-    color: #000;
   }
 }

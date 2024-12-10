@@ -165,9 +165,9 @@ const educations = [
 const experiences = [
   {
     expTitle: 'KDDX 우편물 디지털 전환시스템', //
-    expDesc: `KDDX 우편물 디지털 전환시스템`,
+    expDesc: `KDDX는 문서 형식에 제한 없이 자유롭게 업로드하여 전자 문서를 생성할 수 있고, 간단한 문서부터 중요한 계약서까지 종이 없이 세상의 모든 업무를 진행할 수 있습니다.`,
     expDt: '2023.07 ~ 현재', // 프로젝트 기간
-    expComp: '(주)케이원',  // 발주처
+    expComp: '케이원㈜',  // 발주처
     expContent: ``,
     expImgUrl: 'https://kddx-mngd.k-one.co.kr/img/logo.png',
     ContentImgUrl: [
@@ -178,9 +178,9 @@ const experiences = [
     bgColor: 'black',  // 'black', 'gray', 'light-gray', 'white'
   }, {
     expTitle: 'KITH 해외 인력 관리 플랫폼',
-    expDesc: `KITH 해외 인력 관리 플랫폼`,
+    expDesc: `KITH는 해외 근로자 인재를 채용·등록·관리할 수 있습니다. 수요 기업에 한해 인재 매칭 서비스를 제공하고 다양한 추가 기능을 제공합니다.`,
     expDt: '2024.06 ~ 2024.08',
-    expComp: '(주)케이원',
+    expComp: '케이원㈜',
     expContent: ``,
     expImgUrl: 'https://kith.k-one.co.kr/img/kith-logo.svg',
     ContentImgUrl: [
@@ -189,6 +189,32 @@ const experiences = [
       'https://kith.k-one.co.kr/img/kith-logo.svg'
     ],
     bgColor: 'light-gray',
+  }, {
+    expTitle: 'NH투자증권 대고객 우편물 디지털 전환',
+    expDesc: `우편발송 업무개선을 통해 비용을 절감하고 고객의 편의성을 개선시키는 목적의 솔루션입니다. 기존 금융권에서 사용하는 종이 서식을 전자문서화 하여 제작·발송·보관 등 다양한 기능을 제공합니다.`,
+    expDt: '2021.09.27 - 현재',
+    expComp: '엔에이치투자증권㈜',
+    expContent: ``,
+    expImgUrl: 'https://smtp3.nhqv.com/autohtml/audit/images/logo.jpg',
+    ContentImgUrl: [
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg'
+    ],
+    bgColor: 'light-gray',
+  }, {
+    expTitle: 'KT Paperless 플랫폼',
+    expDesc: `전자계약, 전자등기, 전자문서 보관 서비스를 제공하는 전자문서 플랫폼입니다.`,
+    expDt: '2021.09.27 - 현재',
+    expComp: '케이원㈜',
+    expContent: ``,
+    expImgUrl: 'https://paperless.kt.com/resources/public/images/logo-white.png',
+    ContentImgUrl: [
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg'
+    ],
+    bgColor: 'black',
   },
 ];
 
