@@ -54,24 +54,64 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 1rem;
 }
 .exp-grid > div.exp-card {
-  height: 180px;
+  min-height: 180px;
+
   display: flex;
+  align-items: center;
   gap: 2rem;
 
-  border: 1px solid black;
   margin: 1rem 0;
+  will-change: transform;
+  transition: 0.3s ease all;
+  cursor: pointer;
 }
-.exp-grid > div.exp-card > div:first-child {
-  min-width: 280px;
-  background-color: #000000;
-  border-radius: 13px;
+.exp-grid > div.exp-card:hover {
+  transform: scale(103%);
 }
-.exp-grid > div.exp-card > div:last-child {
-  flex: 1;
+.exp-grid > div.exp-card:hover .card-img {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 20px 0;
 }
 
+.exp-grid > div.exp-card > div.card-img {
+  min-width: 260px;
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+
+  background-color: #000000;
+  border-radius: 13px;
+  will-change: transform;
+  transition: 0.3s ease all;
+}
+.exp-grid > div.exp-card > ul.card-content {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exp-grid > div.exp-card > ul > li {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(98, 111, 134);
+}
+.exp-grid > div.exp-card > ul > li:first-of-type {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172b4d;
+}
+.exp-grid > div.exp-card > ul > li:nth-of-type(2) {
+  font-size: 18px;
+}
+.exp-grid > div.exp-card > ul > li:nth-of-type(3) {
+  padding: 8px 0;
+}
 
 /*  모달 부분  */
 .exp-modal {
@@ -80,7 +120,4 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.exp-modal::-webkit-scrollbar {
-  /*display: none;*/
 }

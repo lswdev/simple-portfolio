@@ -47,6 +47,7 @@ body {
 ul, ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 table {
   border-collapse: collapse;
@@ -94,7 +95,6 @@ table {
 }
 .float-nav li {
   color: #bebebe;
-  list-style: none;
   cursor: pointer;
   transition: 0.3s ease all;
 }
@@ -111,6 +111,20 @@ table {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px 0 0 3px;
   cursor: pointer;
+}
+
+/* Background Color */
+.bg-black {
+  background-color: #000000 !important;
+}
+.bg-gray {
+  background-color: #EFEEF4 !important;
+}
+.bg-light-gray {
+  background-color: #FAFAFA !important;
+}
+.bg-white {
+  background-color: #FFFFFF !important;
 }
 
 @keyframes pulse {
