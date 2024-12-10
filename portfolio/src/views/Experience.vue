@@ -6,59 +6,14 @@
         <div class="item-title item-grid"> Experience </div>
         <div>
           <div class="exp-grid">
-            <div class="exp-card">
-              <div class="card-img">
-                <img src="" alt="">
+            <div class="exp-card" v-for="(exp, index) in expList" @click="showModal(exp)" :key="index">
+              <div class="card-img" :class="`bg-${exp.bgColor}`">
+                <img :src="exp.expImgUrl" alt="">
               </div>
               <ul class="card-content">
-                <li>KDDX</li>
-                <li>내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용</li>
-                <li>2022.03 - 2022.04</li>
-                <li>
-                  <button type="button" @click="showModal">모달 토글</button>
-                </li>
-              </ul>
-            </div>
-
-            <div class="exp-card">
-              <div class="card-img">
-                <img src="" alt="">
-              </div>
-              <ul class="card-content">
-                <li>KDDX</li>
-                <li>내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용</li>
-                <li>2022.03 - 2022.04</li>
-                <li>
-                  <button type="button" @click="showModal">모달 토글</button>
-                </li>
-              </ul>
-            </div>
-
-            <div class="exp-card">
-              <div class="card-img">
-                <img src="" alt="">
-              </div>
-              <ul class="card-content">
-                <li>KDDX</li>
-                <li>내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용</li>
-                <li>2022.03 - 2022.04</li>
-                <li>
-                  <button type="button" @click="showModal">모달 토글</button>
-                </li>
-              </ul>
-            </div>
-
-            <div class="exp-card">
-              <div class="card-img">
-                <img src="" alt="">
-              </div>
-              <ul class="card-content">
-                <li>KDDX</li>
-                <li>내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용 추가할 내용</li>
-                <li>2022.03 - 2022.04</li>
-                <li>
-                  <button type="button" @click="showModal">모달 토글</button>
-                </li>
+                <li>{{ exp.expTitle }} <span style="font-size: 14px; color: #626f86">- {{ exp.expComp }}</span></li>
+                <li>{{ exp.expDesc }}</li>
+                <li>{{ exp.expDt }}</li>
               </ul>
             </div>
           </div>
@@ -73,12 +28,14 @@
     <Modal @modalClose="closeModal" @modalAction="actionModal"
            :modal-title="modalTitle" :modal-desc="modalDesc"
            :action-btn="actionBtn" :close-btn="closeBtn"
-           :class="{'show': modalToggle}"
-    >
+           :class="{'show': modalToggle}" >
       <!--  슬롯 구조 추가  -->
       <div class="exp-modal">
-        <div>
-          모달 body 부분
+        <div v-html="modalContent">
+
+        </div>
+        <div v-for="(item, index) in expContentImages" :key="index">
+          <img :src="item" alt="프로젝트 이미지">
         </div>
       </div>
     </Modal>
@@ -87,28 +44,32 @@
 
 <script>
 import Modal from '@/components/Modal.vue';
-import { expriences } from "@/myInfo";
+import { experiences } from "@/myInfo";
 
 export default {
   components: { Modal },
   data:() => ({
     modalTitle: 'Experience',
     modalDesc: '프로젝트 관련 정보 제공',
+    modalContent: '',
     actionBtn: '확인',
-    closeBtn: '취소',
+    closeBtn: '',
     modalToggle: false,
-    expList: expriences,
+    expList: experiences,
+    expContentImages: [],
   }),
   methods: {
-    showModal() {
+    showModal(exp) {
+      this.modalTitle = exp.expTitle;
+      this.modalDesc = exp.expDesc;
+      this.modalContent = exp.expContent;
+      this.expContentImages = exp.ContentImgUrl;
       this.modalToggle = !this.modalToggle;
     },
-    actionModal({event}) {
-      console.log(event);
+    actionModal() {
       this.modalToggle = false;
     },
-    closeModal({event}) {
-      console.log(event);
+    closeModal() {
       this.modalToggle = false;
     },
   }

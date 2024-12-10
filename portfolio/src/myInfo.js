@@ -161,13 +161,35 @@ const educations = [
   },
 ];
 
-const expriences = [
+/////////////  프로젝트 경험
+const experiences = [
   {
-    expTitle: '프론트엔드 개발 디지털 실무 양성과정',
-    expDt: '2021.02 ~ 2021.08',
-    expComp: '그린컴퓨터아트학원',
-    expDesc: ``,
-  }
+    expTitle: 'KDDX 우편물 디지털 전환시스템', //
+    expDesc: `KDDX 우편물 디지털 전환시스템`,
+    expDt: '2023.07 ~ 현재', // 프로젝트 기간
+    expComp: '(주)케이원',  // 발주처
+    expContent: ``,
+    expImgUrl: 'https://kddx-mngd.k-one.co.kr/img/logo.png',
+    ContentImgUrl: [
+      'https://kddx-mngd.k-one.co.kr/img/logo.png',
+      'https://kddx-mngd.k-one.co.kr/img/logo.png',
+      'https://kddx-mngd.k-one.co.kr/img/logo.png'
+    ],
+    bgColor: 'black',  // 'black', 'gray', 'light-gray', 'white'
+  }, {
+    expTitle: 'KITH 해외 인력 관리 플랫폼',
+    expDesc: `KITH 해외 인력 관리 플랫폼`,
+    expDt: '2024.06 ~ 2024.08',
+    expComp: '(주)케이원',
+    expContent: ``,
+    expImgUrl: 'https://kith.k-one.co.kr/img/kith-logo.svg',
+    ContentImgUrl: [
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg',
+      'https://kith.k-one.co.kr/img/kith-logo.svg'
+    ],
+    bgColor: 'light-gray',
+  },
 ];
 
-export { educations, expriences }
+export { educations, experiences }

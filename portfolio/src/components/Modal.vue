@@ -12,8 +12,8 @@
       </div>
 
       <div class="modal-footer">
-        <button type="button" var="primary" @click="modalAction">{{ actionBtn }}</button>
-        <button type="button" var="danger" @click="modalClose">{{ closeBtn }}</button>
+        <button v-if="actionBtn" type="button" var="primary" @click="modalAction">{{ actionBtn }}</button>
+        <button v-if="closeBtn" type="button" var="danger" @click="modalClose" >{{ closeBtn }}</button>
       </div>
     </div>
   </div>
