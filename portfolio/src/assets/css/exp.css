@@ -1,12 +1,46 @@
 #exp-page {
   position: relative;
+  padding-bottom: 2rem;
+}
+#exp-page .page-contain {
+  overflow: auto;
 }
 #exp-page .item-contain {
+  height: 100%;
   flex: 1;
   padding-top: 2vh;
   display: flex;
   flex-direction: column;
 }
+#exp-page .item-contain > div:nth-of-type(2) {
+  height: 100%;
+  flex: 1;
+  padding-right: 1rem;
+  overflow-y: scroll;
+}
+#exp-page .item-contain > div:nth-of-type(2)::-webkit-scrollbar {
+  display: block !important;
+  width: 6px;
+  height: 5px;
+}
+#exp-page .item-contain > div:nth-of-type(2)::-webkit-scrollbar-thumb {
+  height: 40%;
+  cursor: pointer;
+  /* 스크롤바 색상 */
+  background-image: -webkit-gradient(linear,
+  100% 0%,
+  0% 100%,
+  from(rgba(52, 56, 52, 0.18)),
+  to(rgba(52, 56, 52, 0.18)),
+  color-stop(.5, #343834));
+  border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+#exp-page .item-contain > div:nth-of-type(2)::-webkit-scrollbar-track {
+  background: #FFF;  /*스크롤바 뒷 배경 색상*/
+  border-radius: 10px;
+}
+
+
 #exp-page .item-grid {
   width: 100%;
   display: grid;
@@ -17,17 +51,25 @@
   gap: 0 1rem;
 }
 .exp-grid {
-  flex: 1;
-  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .exp-grid > div.exp-card {
-  height: 100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  height: 180px;
+  display: flex;
+  gap: 2rem;
 
   border: 1px solid black;
-  border-radius: 13px;
   margin: 1rem 0;
+}
+.exp-grid > div.exp-card > div:first-child {
+  min-width: 280px;
+  background-color: #000000;
+  border-radius: 13px;
+}
+.exp-grid > div.exp-card > div:last-child {
+  flex: 1;
 }
 
 

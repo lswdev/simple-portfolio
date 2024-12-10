@@ -159,6 +159,15 @@ const educations = [
     `,
     eduSkill: ['vue', 'npm', 'jest', 'eslint', 'html', 'css', 'javascript'],
   },
-]
+];
 
-export { educations }
+const expriences = [
+  {
+    expTitle: '프론트엔드 개발 디지털 실무 양성과정',
+    expDt: '2021.02 ~ 2021.08',
+    expComp: '그린컴퓨터아트학원',
+    expDesc: ``,
+  }
+];
+
+export { educations, expriences }
