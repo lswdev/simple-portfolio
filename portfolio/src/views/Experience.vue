@@ -7,8 +7,8 @@
         <div>
           <div class="exp-grid">
             <div class="exp-card" v-for="(exp, index) in expList" @click="showModal(exp)" :key="index">
-              <div class="card-img" :class="`bg-${exp.bgColor}`">
-                <img :src="exp.expImgUrl" alt="">
+              <div class="card-img" :class="[`bg-${exp.bgColor}`]">
+                <img :src="exp.expImgUrl" alt="" style="max-height: 45px;" :class="{'mix-mode' : exp.bgMix}">
               </div>
               <ul class="card-content">
                 <li>{{ exp.expTitle }} <span style="font-size: 14px; color: #626f86">- {{ exp.expComp }}</span></li>
@@ -31,10 +31,12 @@
            :class="{'show': modalToggle}" >
       <!--  슬롯 구조 추가  -->
       <div class="exp-modal">
-        <div v-html="modalContent"></div>
-        <div v-for="(item, index) in expContentImages" :key="index">
-          <img :src="item" alt="프로젝트 이미지">
+        <div class="exp-slide">
+          <span v-for="(item, index) in expContentImages" :key="index">
+            <img :src="item" alt="프로젝트 이미지">
+          </span>
         </div>
+        <div v-html="modalContent"></div>
       </div>
     </Modal>
   </div>
@@ -62,7 +64,7 @@ export default {
       this.modalDesc = exp.expDesc;
       this.modalContent = exp.expContent;
       this.expContentImages = exp.ContentImgUrl;
-      this.modalToggle = !this.modalToggle;
+      // this.modalToggle = !this.modalToggle;
     },
     actionModal() {
       this.modalToggle = false;
