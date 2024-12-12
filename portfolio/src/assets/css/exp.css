@@ -154,3 +154,15 @@
     display: none;
   }
 }
+
+@media all and (max-width:520px) {
+  .exp-grid {
+    padding: 1.2rem;
+  }
+  .card-content * {
+    word-break: keep-all;
+  }
+  .card-content > li span {
+    white-space: nowrap;
+  }
+}

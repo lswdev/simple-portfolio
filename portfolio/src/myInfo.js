@@ -71,9 +71,7 @@ const educations = [
     eduNm: 'Vue.js 시작하기 - Age of Vue.js',
     eduDt: '2023.05 ~ 2023.07',
     eduComp: '인프런',
-    eduDesc: `
-      
-    `,
+    eduDesc: ``,
     eduSkill: ['vue', 'npm', 'html', 'css', 'javascript'],
   }, {
     eduNm: 'Vue.js 중급 강좌 - 웹앱 제작으로 배워보는 Vue.js, ES6, Vuex',
