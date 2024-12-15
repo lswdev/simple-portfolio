@@ -8,7 +8,7 @@
           <div class="exp-grid">
             <div class="exp-card" v-for="(exp, index) in expList" @click="showModal(exp)" :key="index">
               <div class="card-img" :class="[`bg-${exp.bgColor}`]">
-                <img :src="exp.expImgUrl" alt="" style="max-height: 45px;" :class="{'mix-mode' : exp.bgMix}">
+                <img :src="exp.expImgUrl" :alt="`${exp.expComp} 로고`" style="max-height: 45px;" :class="{'mix-mode' : exp.bgMix}">
               </div>
               <ul class="card-content">
                 <li>{{ exp.expTitle }} <span style="font-size: 14px; color: #626f86">- {{ exp.expComp }}</span></li>
